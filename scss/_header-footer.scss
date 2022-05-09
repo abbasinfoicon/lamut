@@ -1,0 +1,81 @@
+/*========================================================================================================
+================================ Header Scss ===================================================================
+===========================================================================================================*/
+header {
+  @include full-width;
+  padding: 14px 0;
+  margin-bottom: 15px;
+}
+
+//breadcrumb_div
+.breadcrumb_div {
+  margin-bottom: 30px;
+
+  ul {
+    li {
+      @include roboto(light300);
+      font-size: 11px;
+      color: rgba(0, 0, 0, 0.77);
+      display: inline-block;
+      position: relative;
+      padding-right: 34px;
+
+      @include mq(max, 425){
+        padding-right: 24px;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: -22px;
+        top: 49%;
+        transform: translate(0%, -50%);
+        background-image: url(../img/breadcream-icon.png);
+        height: 9px;
+        width: 6px;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        @include mq(max, 425){
+          left: -15px;
+        }
+      }
+
+      &:first-child {
+        &:before {
+          content: none;
+        }
+      }
+
+      a {
+        color: inherit;
+      }
+    }
+  }
+}
+
+//se-deconnecter
+.se-deconnecter {
+  text-align: center;
+  float: right;
+  padding-top: 7px;
+
+  @include mq(max, 768){
+    float: none;
+  }
+
+  a {
+    text-align: center;
+    @include roboto(light300);
+    font-size: 12px;
+    color: $black;
+    letter-spacing: -0.1px;
+    display: block;
+  }
+
+  img {
+    margin: 0 auto 8px;
+  }
+}
+
+

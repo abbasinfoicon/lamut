@@ -1,0 +1,646 @@
+/*========================================================================================================
+================================ HOME-PAGE-CSS ===================================================================
+===========================================================================================================*/
+section {
+  @include full-width;
+  padding-bottom: 35px;
+
+  @include mq(max, 768) {
+    padding-bottom: 25px;
+  }
+}
+
+//contentTitle-custom
+.contentTitle-custom {
+  text-align: center;
+
+  h1 {
+    @include campton(light300);
+    font-size: 32px;
+    color: $red;
+    margin-bottom: 26px;
+
+    @include mq(max, 425) {
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+
+    .big-text {
+      font-size: 54px;
+      @include campton(bold700);
+      display: block;
+      margin-top: 5px;
+      letter-spacing: -1px;
+
+      @include mq(max, 425) {
+        font-size: 48px;
+        letter-spacing: -0.5px;
+      }
+    }
+  }
+
+  p {
+    @include campton(light300);
+    font-weight: 400;
+    font-size: 20px;
+    color: $black;
+    line-height: 1.2;
+
+    @include mq(max, 768) {
+      font-size: 16px;
+    }
+
+    @include mq(max, 425) {
+      font-size: 15px;
+    }
+  }
+}
+
+//main-section
+.main-section {
+  background-image: url(../img/red_bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 77px 0 65px;
+
+  @include mq(max, 425) {
+    padding: 30px 0;
+  }
+
+  .row {
+    .col-md-6 {
+      &:first-child {
+        border-right: 1px solid $white;
+
+        @include mq(max, 992) {
+          border-right: none;
+          border-bottom: 1px solid $white;
+          margin-bottom: 30px;
+        }
+
+        @include mq(max, 425) {
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+
+
+  //form
+  form {
+    .form-group {
+      margin-bottom: 20px;
+
+      @include mq(max, 425) {
+        margin-bottom: 15px;
+      }
+
+      input {
+        height: 36px;
+        @include roboto(light300);
+        font-size: 13px;
+        color: $black;
+        padding-left: 15px;
+        border: none;
+
+        &::placeholder {
+          color: $black;
+
+        }
+      }
+
+      input[type="date"] {
+        position: relative;
+        cursor: pointer;
+
+        &::-webkit-calendar-picker-indicator {
+          cursor: pointer;
+          outline: none;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+
+      input[type=number]::-webkit-outer-spin-button,
+      input[type=number]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      input[type=number] {
+        -moz-appearance:textfield;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &.main-padding {
+    padding-top: 23px;
+  }
+}
+
+//identify-yourself
+.identify-yourself {
+  text-align: center;
+  position: relative;
+  margin: 0 auto 30px;
+
+  @include mq(max, 425) {
+    margin-bottom: 15px;
+  }
+
+  h3 {
+    color: $white;
+    font-size: 20px;
+    margin-bottom: 69px;
+    @include campton(bold700);
+    //@include roboto(bold700);
+
+    @include mq(max, 992) {
+      margin-bottom: 40px;
+    }
+
+    @include mq(max, 768) {
+      margin-bottom: 30px;
+    }
+
+    @include mq(max, 425) {
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+  }
+
+  p {
+    font-size: 16px;
+    @include campton(light300);
+    color: $white;
+    line-height: 1.4;
+    margin-bottom: 46px;
+
+    @include mq(max, 768) {
+      margin-bottom: 20px;
+    }
+
+    @include mq(max, 425) {
+      font-size: 15px;
+      margin-bottom: 15px;
+    }
+  }
+
+  //champs-obligatoire
+  .champs-obligatoire {
+    color: $white;
+    font-size: 12px;
+    float: right;
+    position: absolute;
+    top: 58px;
+    right: 0;
+    letter-spacing: 0.3px;
+    font-family: Arial;
+
+    @include mq(max, 992) {
+      position: static;
+      margin-bottom: 8px;
+    }
+
+    &.chob-static {
+      top: -25px;
+    }
+  }
+
+
+  //forgot-password
+  .forgot-password {
+    font-size: 12px;
+    color: $white;
+    @include roboto(light100);
+    text-align: center;
+    display: block;
+    letter-spacing: 0.3px;
+    text-decoration: underline;
+
+    &:hover {
+      color: lighten($black, 77%);
+    }
+  }
+
+  &.customMargin {
+    padding-top: 25px;
+    margin-top: 55px;
+
+    @include mq(max, 768) {
+      @include full-width;
+    }
+
+    @include mq(max, 425) {
+      padding-top: 15px;
+      margin-top: 30px;
+    }
+
+    h3 {
+      margin-bottom: 18px;
+
+      @include mq(max, 425) {
+        margin-bottom: 15px;
+      }
+    }
+
+    p {
+      margin-bottom: 28px;
+
+      @include mq(max, 425) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  &.mb-30 {
+    h3 {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+//btn-connecte
+.btn-connecte {
+  border: none;
+  outline: none;
+  @include box-shadow(none);
+  height: 40px;
+  min-width: 214px !important;
+  font-size: 15px;
+  color: $red;
+  @include campton(bold700);
+  @include border-radius(2);
+  letter-spacing: 0.3px;
+  background: $white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 50px;
+  width: fit-content;
+  transition: .5s;
+
+  &:hover {
+    color: $white;
+    background: darken($red, 10%);
+  }
+
+
+  @include mq(max, 768) {
+    width: 100%;
+  }
+
+  &:focus, &:hover, &:active {
+    outline: none;
+    border: none;
+  }
+}
+
+//customWidth-363
+.customWidth-363 {
+  @include mq(min, 1366) {
+    width: 363px;
+    margin: 0 auto;
+  }
+}
+
+//customWidth-363
+.customWidth-490 {
+  @include mq(min, 1366) {
+    width: 490px;
+    margin: 0 auto;
+  }
+}
+
+
+.more-info {
+  margin: 0 auto 70px;
+  width: 743px;
+
+  .width-wrap-607 {
+    width: 607px;
+    margin: 0 auto;
+
+    @include mq(max, 992) {
+      width: 90%;
+    }
+
+    @include mq(max, 768) {
+      width: 96%;
+    }
+  }
+
+  @include mq(max, 992) {
+    margin: 0 auto 40px;
+    width: 90%;
+  }
+
+  @include mq(max, 768) {
+    margin: 0 auto 30px;
+    width: 96%;
+  }
+
+  @include mq(max, 425) {
+    margin: 0 auto 20px;
+  }
+
+  .item {
+    background: $white;
+    width: 136px;
+    height: 136px;
+    padding: 25px 10px;
+    cursor: pointer;
+
+    @include mq(max, 992) {
+      width: auto;
+
+    }
+
+    img {
+      width: 36px;
+      height: 41px;
+      margin: 0 auto 15px;
+
+      &.img-white {
+        display: none;
+      }
+
+      &.img-red {
+        display: block;
+      }
+    }
+
+    .line {
+      position: relative;
+      height: 1px;
+      width: 85px;
+      background: #b2b2b2;
+      margin: 0 auto 10px;
+    }
+
+    p {
+      @include campton(bold700);
+      font-weight: bold;
+      color: $black;
+      font-size: 12px;
+      text-align: center;
+    }
+
+    &.show, &:hover {
+      background: $black;
+
+      img {
+        &.img-red {
+          display: none;
+        }
+
+        &.img-white {
+          display: block;
+        }
+      }
+
+      .line {
+        background: $white;
+      }
+
+      p {
+        color: $white;
+      }
+    }
+  }
+
+  .owl-nav {
+    display: block !important;
+
+    .owl-prev, .owl-next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .owl-prev {
+      left: -73px;
+
+      @include mq(max, 768) {
+        left: -30px;
+      }
+
+      @include mq(max, 425) {
+        left: -25px;
+      }
+    }
+
+    .owl-next {
+      right: -73px;
+
+      @include mq(max, 768) {
+        right: -30px;
+      }
+
+      @include mq(max, 425) {
+        right: -25px;
+      }
+    }
+  }
+}
+
+//delete-account
+.delete-account {
+  text-align: right;
+  position: relative;
+  bottom: -40px;
+
+
+  @include mq(max, 992) {
+    bottom: 0;
+  }
+
+  a {
+    font-size: 15px;
+    color: #f4f4f6;
+    @include campton(light300);
+    text-decoration: underline;
+
+    &:hover {
+      color: $white;
+    }
+  }
+}
+
+//width-wrap-607
+.width-wrap-607 {
+  width: 607px;
+  margin: 0 auto;
+
+  @include mq(max, 992) {
+    width: 90%;
+  }
+
+  @include mq(max, 768) {
+    width: 96%;
+  }
+}
+
+
+//media-section
+.media-section {
+  float: left;
+  width: 100%;
+  position: relative;
+  padding: 32px 15px 32px 68px;
+  border-top: 1px solid $white;
+
+  @include mq(max, 992) {
+    padding: 15px;
+  }
+
+  p, label {
+    font-size: 18px;
+    color: $white;
+    @include campton(light300);
+    margin-bottom: 19px;
+
+    @include mq(max, 768) {
+      margin-bottom: 15px;
+    }
+  }
+
+  //demo-group
+  .demo-group {
+    @include full-width;
+
+    &.mb-45 {
+      margin-bottom: 45px;
+
+      @include mq(max, 768) {
+        margin-bottom: 30px;
+      }
+
+      @include mq(max, 425) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .input-group {
+    float: left;
+    margin-right: 63px;
+
+    @include mq(max, 768) {
+      margin-right: 40px;
+    }
+
+    @include mq(max, 425) {
+      margin-right: 30px;
+    }
+  }
+
+  input[type="radio"] {
+    opacity: 0;
+    position: absolute;
+    cursor: pointer;
+  }
+
+  input[type="radio"] + label {
+    cursor: pointer;
+    margin-bottom: 0;
+  }
+
+  input[type="radio"] + label:before {
+    cursor: pointer;
+    content: '';
+    background: $white;
+    border: none;
+    display: inline-block;
+    vertical-align: middle;
+    width: 10px;
+    height: 10px;
+    line-height: 10px;
+    margin-right: 12px;
+    text-align: center;
+  }
+
+  input[type="radio"][type='radio'] + label:before {
+    border-radius: 50%;
+  }
+
+  input[type="radio"]:checked + label {
+    color: $white;
+  }
+
+  input[type="radio"]:checked + label:before {
+    content: "✔";
+  }
+
+  input[type="radio"][type='radio']:checked + label:before {
+    background: none;
+    content: '✔';
+  }
+
+  input[type="radio"]:focus + label:before {
+    border-color: #6495ed;
+  }
+
+  &:last-child {
+    border-bottom: 1px solid $white;
+  }
+
+}
+
+
+//more-info-big
+.more-info-big {
+  background: $white;
+  margin-top: 23px;
+  height: 257px;
+  transition: .5s;
+
+  a {
+    padding: 47px 30px;
+    display: block;
+  }
+
+  img {
+    margin: 0 auto 30px;
+  }
+
+  .line {
+    position: relative;
+    height: 1px;
+    width: 160px;
+    background: #b2b2b2;
+    margin: 0 auto 25px;
+  }
+
+  p {
+    font-size: 16px;
+    color: $black;
+    @include campton(bold700);
+    //@include roboto(bold700);
+    font-weight: bold;
+    text-align: center;
+  }
+
+  &:hover {
+    background: $black;
+
+    .line{
+      background: $white;
+    }
+
+    p{
+      color: $white;
+    }
+
+    img{
+      filter: invert(180%) sepia(303%) saturate(0) hue-rotate(0deg)
+    }
+  }
+}
